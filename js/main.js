@@ -48,16 +48,10 @@ function timer() {
         for (i =0; i < numeriUtente.length; i++)  { //Se devo confrontare "5 numeriUtente" con "5 numRandom" utilizzo il Ciclo "For"
             if (numRandom.includes(numeriUtente[i])) { //Se devo verificare che all'interno del numRandom sono INCLUSI i numeriUtente utilizzo il METODO "INCLUDES"
                 console.log('Il numero indovinato: ' + numeriUtente[i]); //Numero indovinato all'interno del numRandom
+                document.getElementById('numInseriti').innerHTML = ('I numeri inseri sono: ' + numeriUtente.join(' '));
             }
         }
     }
     seconds--;
 }
-
-
-
-
-
-
-
 
