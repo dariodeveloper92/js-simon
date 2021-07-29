@@ -30,6 +30,7 @@ function getRndInteger(numRandom) {
 }
 
 //Da li parte un timer di 30 secondi.
+console.log('Timer 30 secondi');
 let seconds = 30; //VARIABILE SECONDI
 let idInterval = setInterval(timer, 300);
 
@@ -40,8 +41,9 @@ function timer() {
     if (seconds == 1) {
         clearInterval(idInterval);
         alert('Indovina i numeri: '); //////STAMPO SU ALERT
-        document.getElementById('countdown').innerHTML = ('I numeri indovinati sono ' + numRandom1 + ' ' + numRandom2 + ' ' + numRandom3 + ' ' + numRandom4 + ' ' + numRandom5);////STAMPO SU HTML
+        document.getElementById('countdown').innerHTML = ('I numeri Random sono ' + numRandom1 + ' ' + numRandom2 + ' ' + numRandom3 + ' ' + numRandom4 + ' ' + numRandom5);////STAMPO SU HTML
         //Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+        
         //VARIABILI - NUMERI INSERITI DALL'UTENTE
         var numeriUtente1 = parseInt(prompt('Inserisci il primo numero che ha visto precedentemente'));
         var numeriUtente2 = parseInt(prompt('Inserisci il secondo numero che ha visto precedentemente'));
@@ -49,11 +51,24 @@ function timer() {
         var numeriUtente4 = parseInt(prompt('Inserisci il quarto numero che ha visto precedentemente'));
         var numeriUtente5 = parseInt(prompt('Inserisci il quinto numero che ha visto precedentemente'));
         //Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+        
         //CONDIZIONE
-
-        if(numeriUtente1 = numRandom1) {
-            console.log('I numeri indovinati sono: ' + numRandom1 + ' ' );
-        } else {
+        if(numUtente1 = numRandom1) {
+            console.log('I numeri indovinati sono: ' + numUtente1);
+        } 
+        else if(numUtente2 = numRandom2) {
+            console.log('I numeri indovinati sono: ' + numUtente1);
+        }
+        else if(numUtente3 = numRandom3) {
+            console.log('I numeri indovinati sono: ' + numUtente1);
+        }
+        else if(numUtente4 = numRandom4) {
+            console.log('I numeri indovinati sono: ' + numUtente1);
+        }
+        else if(numUtente5 = numRandom5) {
+            console.log('I numeri indovinati sono: ' + numUtente1);
+        }
+        else {
             console.log('Non hai indovinato i numeri ');
         }
         
